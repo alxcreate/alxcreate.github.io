@@ -2,8 +2,8 @@ body {
     font-family: "Source Sans Pro", Arial, sans-serif;
     background-color: #f2f2f2;
     background-image: url('bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: auto;
+    background-repeat: repeat;
     margin: 0;
     padding: 0;
     display: flex;
