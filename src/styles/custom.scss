@@ -1,0 +1,190 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@use './components/admonition';
+@use './components/back-to-top-button';
+@use './components/code';
+// @use './components/doc-item';
+@use './components/doc-root';
+@use './components/doc-sidebar';
+@use './components/edit-this-page';
+@use './components/markdown';
+@use './components/navbar';
+@use './components/navbar-sidebar';
+@use './components/pagination';
+@use './components/search';
+@use './components/table';
+@use './components/tabs';
+@use './components/theme-toggle';
+@use './components/toc';
+
+:root {
+  --ifm-background-color: var(--token-primary-bg-c);
+
+  --ifm-navbar-link-hover-color: initial;
+  --ifm-navbar-padding-vertical: 0;
+  --ifm-navbar-item-padding-vertical: 0;
+
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI emoji';
+  --ifm-font-family-monospace: 'SFMono-Regular', 'Roboto Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDEwIDYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik04Ljk5OTg4IDVMNC45OTk4OCAxTDAuOTk5ODc4IDUiIHN0cm9rZT0iIzAzMDYwQiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K');
+
+  //#region ----------- Z Indices ------------
+  --z-sidebar: 2000;
+  --z-backdrop: 1100;
+  //#endregion
+}
+
+html[data-theme='light'] {
+  --token-primary-bg-c: #f8f4ec;
+  --token-secondary-bg-c: #f8f4ec;
+
+  --ifm-link-color: rgb(47, 95, 178);
+  //rgb value is c-blue-90
+  --ifm-link-hover-color: rgb(35, 113, 248);
+
+  --ifm-background-surface-color: rgb(28, 96, 212);
+
+  --ifm-navbar-background-color: #f8f4ec;
+  --ifm-navbar-shadow: 0 0px 0 0 rgb(28, 96, 212);
+
+  --ifm-heading-color: rgb(0, 0, 0);
+  --ifm-secondary-heading-color: rgb(0, 0, 0);
+
+  --ifm-code-background: rgb(28, 96, 212);
+  --ifm-font-color-base: rgb(0, 0, 0);
+}
+
+html[data-theme='dark'] {
+  --token-primary-bg-c: #373737;
+  --token-secondary-bg-c: #373737;
+
+  --ifm-link-color: rgb(79, 143, 255);
+  //rgb value is c-blue-70
+  --ifm-link-hover-color: rgb(28, 111, 255);
+
+  --ifm-background-surface-color: #373737;
+
+  --ifm-navbar-background-color: rgb(55, 55, 55);
+  --ifm-navbar-shadow: 0 0px 0 0 rgb(55, 55, 55);
+
+  --ifm-heading-color: rgb(255, 255, 255);
+  --ifm-secondary-heading-color: rgb(255, 255, 255);
+
+  --ifm-font-color-base: rgb(255, 255, 255);
+  --ifm-background-color: rgb(55, 55, 55);
+  --ifm-dropdown-background-color: rgb(55, 55, 55);
+
+  --ifm-menu-link-sublist-icon-filter: invert(100%);
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+
+  scroll-padding-top: calc(var(--ifm-navbar-height) + 16px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.theme-doc-version-banner {
+  display: none;
+}
+
+.theme-doc-version-badge {
+  display: none;
+}
+
+ion-grid {
+  margin: 1em 0;
+}
+
+figure {
+  margin: 0;
+}
+
+figure > * {
+  display: block;
+  margin: 0 auto;
+}
+
+figure.device {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+figcaption {
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+iframe {
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.git-link {
+  &::before {
+    content: '';
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    background-color: currentColor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100% 100%;
+    mask-image: url(../../static/icons/code-branch.svg);
+    vertical-align: -0.1em;
+    margin-inline-end: 5px;
+  }
+}
+
+
+.cordova-ee-card {
+  max-width: 100%;
+}
+
+.cordova-ee-img {
+  width: 50px;
+  float: left;
+  margin-right: 20px;
+}
+
+.native-ee-detail {
+  float: right;
+  cursor: pointer;
+}
+
+.cordova-ee-card p {
+  margin: 1rem 0 0;
+}
