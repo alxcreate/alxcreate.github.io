@@ -1,5 +1,4 @@
 import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

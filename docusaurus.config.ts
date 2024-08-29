@@ -116,7 +116,7 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Docs',
         },
@@ -129,7 +129,7 @@ const config: Config = {
       ],
     },
     prism: {
-      // theme: prismThemes.okaidia,
+      theme: prismThemes.nightOwl,
       // darkTheme: prismThemes.oneDark,
       additionalLanguages: [
         'java',
@@ -162,7 +162,6 @@ const config: Config = {
           line: 'highlight-next-line-error',
         },
       ],
-      theme: prismThemes.okaidia,
     },
     // footer: {
     //   style: 'dark',
