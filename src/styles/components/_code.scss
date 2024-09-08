@@ -6,17 +6,16 @@
   --code-block-line-height: 1.5;
 
   //inline code
-  --ifm-code-background: var(--c-indigo-10);
-}
+    --ifm-code-background: #E8EAF6;
+  }
 
-html[data-theme='light'] {
-  --code-block-bg-c: var(--c-indigo-10);
-}
+  html[data-theme='light'] {
+    --code-block-bg-c: #E8EAF6;
+  }
 
-html[data-theme='dark'] {
-  --code-block-bg-c: var(--token-secondary-bg-c);
-}
-
+  html[data-theme='dark'] {
+    --code-block-bg-c: #1E1E1E;
+  }
 :not(pre) > code {
   position: relative;
   margin-block-start: -0.125rem;

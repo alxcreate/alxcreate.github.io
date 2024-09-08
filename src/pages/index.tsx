@@ -8,32 +8,34 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fab, fas);
 
-import '../css/styles.css';
+import '../styles/styles-index.css';
 
 export default function Home(): JSX.Element {
   return (
     <Layout>
       <main className="home-page">
-        <section className="section">
-            <img src="img/photo.png" className="avatar" />
-          <div className="contact-info">
+        <section className="profile-section">
+          <div className="profile-avatar-container">
+            <img src="img/photo.png" className="profile-avatar" alt="Aleksey Abramov" />
+          </div>
+          <div className="profile-info">
             <p>Aleksey Abramov</p>
             <p>System Engineer</p>
           </div>
-          <div className="vertical-line"></div>
-          <hr className="horizontal-line" />
-          <div className="contacts-container">
-            <div className="contact-item">
+          <div className="profile-vertical-line"></div>
+          <hr className="profile-horizontal-line" />
+          <div className="profile-contacts-container">
+            <div className="profile-contact-item">
               <a href="mailto:alx@alxcreate.com">
                 <FontAwesomeIcon icon={['fas', 'envelope']} /> alx@alxcreate.com
               </a>
             </div>
-            <div className="contact-item">
+            <div className="profile-contact-item">
               <a href="https://www.linkedin.com/in/alxcreate" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={['fab', 'linkedin']} /> LinkedIn
               </a>
             </div>
-            <div className="contact-item">
+            <div className="profile-contact-item">
               <a href="https://t.me/alxcreate1" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={['fab', 'telegram']} /> Telegram
               </a>

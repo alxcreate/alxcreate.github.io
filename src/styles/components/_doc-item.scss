@@ -15,7 +15,7 @@
   }
 
   [class*='docItemContainer_'] {
-    max-width: var(--doc-item-container-width);
+    // max-width: var(--doc-item-container-width);
     flex-grow: 1;
     min-width: 0;
   }
