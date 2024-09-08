@@ -1,7 +1,7 @@
 ---
 title: First Blog Post
 authors: alxcreate
-tags: [test]
+tags: []
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies.
