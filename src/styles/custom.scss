@@ -17,12 +17,16 @@
 @use './components/markdown';
 @use './components/navbar';
 @use './components/navbar-sidebar';
-@use './components/pagination';
+// @use './components/pagination';
 @use './components/search';
 @use './components/table';
 @use './components/tabs';
 @use './components/theme-toggle';
 @use './components/toc';
+
+.pagination-nav {
+  display: none;
+}
 
 :root {
   --ifm-background-color: var(--token-primary-bg-c);

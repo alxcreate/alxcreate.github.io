@@ -79,21 +79,21 @@ const config: Config = {
     ],
   ],
 
-  // themes: [
-  //   '@docusaurus/theme-live-codeblock',
-  //   [
-  //     // @ts-ignore
-  //     "@easyops-cn/docusaurus-search-local",
-  //     /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-  //     // @ts-ignore
-  //     ({
-  //       hashed: true,
-  //       language: ["ru", "en"],
-  //       highlightSearchTermsOnTargetPage: true,
-  //       explicitSearchResultPath: true,
-  //     }),
-  //   ],
-  // ],
+  themes: [
+    '@docusaurus/theme-live-codeblock',
+    [
+      // @ts-ignore
+      "@easyops-cn/docusaurus-search-local",
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      // @ts-ignore
+      ({
+        hashed: true,
+        language: ["ru", "en"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      }),
+    ],
+  ],
 
   themeConfig: {
     metadata: [
